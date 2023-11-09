@@ -2,22 +2,16 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  function apple() 
+  {
+    return alert("apple function called");
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Hello World!</h1>
+      {/* While calling function with onclick use it as a variable like this or with arrow function */}
+      <button onClick={apple}>Click Me!</button>
+      <button onClick={()=>apple()}>Another Click Me!</button>
     </div>
   );
 }
