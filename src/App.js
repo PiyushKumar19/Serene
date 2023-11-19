@@ -2,22 +2,17 @@ import logo from './logo.svg';
 import './App.css';
 import React, { Component, useState } from 'react';
 import { Profile } from './Profile';
-import { User } from './User';
+import  User  from './User';
 
 function App() {
-  const [name, setName ] = useState("");
-
-  function greet() {
-    alert(name);
-  }
+  const [name, setName] = useState("Piyush");
   return (
-    <div className="App">
-      <Profile />
-      
-      <input type='string' onChange={(e)=>setName(e.target.value)} placeholder='Enter name'></input>
-      <User name={name} funct={greet} />
+    <div>
+      <h1>Render method with class component in React</h1>
+      <User name={name} />
+      <button onClick={()=>setName("Kumar")}>Update Name</button>
     </div>
-  );
+  )
 }
 
 export default App;
